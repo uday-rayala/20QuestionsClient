@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="210a9e6b-f4e7-4c75-aebf-32721ec107be" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/lib/clojure.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/20QuestionsClient.ipr" afterPath="$PROJECT_DIR$/20QuestionsClient.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/20QuestionsClient.iws" afterPath="$PROJECT_DIR$/20QuestionsClient.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ruk/twenty_questions.clj" afterPath="$PROJECT_DIR$/src/ruk/twenty_questions.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ruk/twenty_questions_test.clj" afterPath="$PROJECT_DIR$/test/ruk/twenty_questions_test.clj" />
     </list>
@@ -86,7 +84,7 @@
       <file leaf-file-name="twenty_questions.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ruk/twenty_questions.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="73" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+            <state line="7" column="67" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,7 +93,7 @@
       <file leaf-file-name="twenty_questions_test.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ruk/twenty_questions_test.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="55" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.51265824">
+            <state line="20" column="65" selection-start="994" selection-end="994" vertical-scroll-proportion="0.37974682">
               <folding />
             </state>
           </provider>
@@ -608,14 +606,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ruk/twenty_questions.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="73" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+        <state line="7" column="67" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ruk/twenty_questions_test.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="55" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.51265824">
+        <state line="20" column="65" selection-start="994" selection-end="994" vertical-scroll-proportion="0.37974682">
           <folding />
         </state>
       </provider>

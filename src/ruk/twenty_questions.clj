@@ -2,11 +2,13 @@
 
 (defn ask [question] "Yes")
 
-(defn trace [question-root]
-  (let [answer (ask (:question (zip/node question-root)))]
-    (let [next-move (if (= "Yes" answer) (-> question-root zip/down zip/leftmost) (-> question-root zip/down zip/rightmost))]
-      (if (zip/branch? next-move) (recur next-move) (zip/node next-move)))))
+(defn trace [root]
+  (let [answer (ask (:question (zip/node root)))]
+    (let [next (if (= "Yes" answer) (-> root zip/down zip/leftmost) (-> root zip/down zip/rightmost))]
+      (if (zip/branch? next) (recur next) {:answer (zip/node next)}))))
 
-(defn identify [question-bank]
-  (let [question-zip (zip/zipper map? (fn [node] [(:yes node) (:no node)]) (fn [node children] (:question node)) question-bank)]
-     (trace question-zip)))
+(defn question-zip [question-bank] (zip/zipper map? (fn [node] [(:yes node) (:no node)]) (fn [node children] (:question node)) question-bank))
+
+(defn identify [question-bank] 
+  (let [root (question-zip question-bank)] 
+    (trace root)))

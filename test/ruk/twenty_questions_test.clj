@@ -12,22 +12,22 @@
                                 :no "Jimmy Carter"}
                            })
 
-(fact (identify dr-who-question-bank) => "Dr Who"
+(fact (identify dr-who-question-bank) => (contains {:answer "Dr Who"})
   (provided (ask "Are you a character from Dr Who?") => "Yes"))
 
-(fact (identify dr-who-question-bank) => "Jimmy Carter"
+(fact (identify dr-who-question-bank) => (contains {:answer "Jimmy Carter"})
   (provided (ask "Are you a character from Dr Who?") => "No"))
 
-(fact (identify question-bank) => "Usain Bolt"
+(fact (identify question-bank) => (contains {:answer "Usain Bolt"})
   (provided (ask "Are you a character from Dr Who?") => "No"
             (ask "Are you a famous athlete?") => "Yes"
             (ask "Are you a sprinter?") => "Yes"))
 
-(fact (identify question-bank) => "Jimmy Carter"
+(fact (identify question-bank) => (contains {:answer "Jimmy Carter"})
   (provided (ask "Are you a character from Dr Who?") => "No"
             (ask "Are you a famous athlete?") => "No"))
 
-(fact (identify question-bank) => "Michael Phelps"
+(fact (identify question-bank) => (contains {:answer "Michael Phelps"})
   (provided (ask "Are you a character from Dr Who?") => "No"
             (ask "Are you a famous athlete?") => "Yes"
             (ask "Are you a sprinter?") => "No"))
