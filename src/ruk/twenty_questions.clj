@@ -9,13 +9,15 @@
     (let [next (if (= "Yes" answer) (-> root zip/down zip/leftmost) (-> root zip/down zip/rightmost))]
       (if (zip/branch? next) (recur next) next))))
 
-(defn update-questions [wrong-answer]
-  (let [correct-answer (ask "Who are you?") correct-question (ask "What question should i ask to identify you?")]
-    (zip/replace wrong-answer {:question correct-question :yes correct-answer :no (zip/node wrong-answer)})))
+(defn update-questions [wrong-answer correct-question correct-answer]
+  (zip/replace wrong-answer {:question correct-question :yes correct-answer :no (zip/node wrong-answer)}))
 
 (defn confirm [answer]
   (let [confirmation (ask (str "Are you " (zip/node answer) "?"))]
-    (if (= "Yes" confirmation) (zip/root answer) (zip/root (update-questions answer)))))
+    (zip/root (if (= "Yes" confirmation)
+              (do (println "Got you !!") answer)
+              (do (let [correct-answer (ask "Who are you?") correct-question (ask "What question should i ask to identify you?")]
+                (println "Updated my question bank. Will identify you next time !!") (update-questions answer correct-question correct-answer)))))))
 
 (defn start [questions]
   (let [root (question-zip questions)] 
